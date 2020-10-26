@@ -1,0 +1,39 @@
+<div *ngIf="ready">
+    <div class="row" >
+        <div class="col">
+            <input #idPortfolio type="text" (keyup.enter)="getPortfolio(idPortfolio.value)" class="form-control"
+                placeholder="Search by id..." style="width: 46rem;">
+        </div>
+    </div>
+    <div class="row" *ngIf="portfolioNotFound">
+        <div class="col">
+            <p class="card-text" id="textNotFound">Portfolio not found!!</p>
+        </div>
+    </div>
+
+    <div class="card-columns m-4">
+
+        <div class="card" style="width: 18rem;">
+            <img src={{portfolio.imageUrl}} class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title" name="card-title">My Work Experience</h5>
+                <p class="card-text" id="description" name="description">{{ portfolio.description }}</p>
+                <button type="submit" class="btn btn-primary" id="goTo" (click)="seePortfolio(portfolio.id)">Go to account
+                    ></button>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-header">
+                <strong>{{ portfolio.twitterUserName }}'s Timeline</strong>
+            </div>
+            <ul class="list-group list-group-flush" *ngFor="let twit of userTimeLine.data">
+                <li class="list-group-item">
+                    <strong>{{ twit.user.name }}</strong><br />
+                    {{ twit.full_text }}
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
