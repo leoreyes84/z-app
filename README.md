@@ -45,14 +45,14 @@ ng s
 
 # *Technologies*
 ## I. Back-end
-- Spring boot
+- Spring boot 2.3.4
 - Java 11
-- Lombok
-- ModelMapper
+- Lombok 1.18
+- ModelMapper 2.3.7
 - IDE Eclipse
 
 ## II. Front-end
-- Angular
+- Angular 8
 - Jasmine-Protractor
 - IDE Visual Studio Code
 
@@ -61,4 +61,4 @@ ng s
 - Node server
 
 # *Time taken for the test*
-- 9 hours
+- 8 hours
